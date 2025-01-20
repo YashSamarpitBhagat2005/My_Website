@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleprofile.css">
+    <title> My Profile </title>
+</head>
+<body>
+    <center>
+        <div id="welcome_button">
+            <h2> WELCOME FRIEND </h2>
+            <button> PROCEED </button>
+        </div>
+    </center>
+
+    <script>
+        function updateBackground(){
+            const now=new Date();
+            const hour = now.getHours();
+
+            if(hour>=6 && hour<12){
+                document.body.style.backgroundImage="url('C:\users\lenovo\Downloads\morning.png')";
+            }else if (hour>=12 && hour <18){
+                document.body.style.backgroundImage="url('C:\users\lenovo\Downloads\evening.png')";
+            }else{
+                document.body.style.backgroundImage="url('C:\users\lenovo\Downloads\night.png')";
+            }
+        }
+    </script>
+</body>
+</html>

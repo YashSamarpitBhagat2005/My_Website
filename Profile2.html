@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Change</title>
+    <link rel="stylesheet" href="profile2style.css">
+</head>
+<body>
+        <div class="element_container">
+            <div class="item"> <a id="ec_a" href="#contact"> Contact </a> </div>
+            <div class="item"> <a id="ec_a" href="#SocialMedia"> Social Media </a> </div>
+        </div>
+
+
+        <center>
+            <div> 
+                <div class="container_main1">
+                    <h1 id="heading_wtmyp"> WELCOME TO MY PROFILE 🥂</h1>
+                    <button id="button_proceed"> PROCEED </button>
+                </div>
+            </div>
+
+            <div class="bio_container">
+                <div class="section">
+                    <button class="section-title">Bio</button>
+                </div>
+                <div class="section"> 
+                    <button class="section-title">Education</button>
+                </div>
+                <div class="section">
+                    <button class="section-title">Projects</button> 
+                </div> 
+                <div class="section"> 
+                   <button class="section-title">Hobbies</button> 
+                </div>
+            </div>
+
+
+
+
+        </center>
+
+    <script>
+        function changeBackground() {
+            const hour = new Date().getHours();
+            let backgroundImage = '';
+
+            if (hour >= 6 && hour < 12) {
+                backgroundImage = 'url(morning.jpg)';
+            } else if (hour >= 12 && hour < 18) {
+                backgroundImage = 'url(evening.jpg)';
+            } else {
+                backgroundImage = 'url(night.jpg)';
+            }
+
+            document.body.style.backgroundImage = backgroundImage;
+        }
+
+        changeBackground();
+        setInterval(changeBackground, 3600000);
+
+
+    </script>
+</body>
+</html>
